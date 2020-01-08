@@ -14,7 +14,11 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".VideoPlayerActivity" android:screenOrientation="landscape">
+        <activity android:name=".SearchActivity">
+        </activity>
+        <activity
+                android:name=".VideoPlayerActivity"
+                android:screenOrientation="landscape">
         </activity>
         <activity android:name=".CustomRowActivityStyleA">
         </activity>

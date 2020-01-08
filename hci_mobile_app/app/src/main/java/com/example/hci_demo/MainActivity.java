@@ -1,11 +1,13 @@
 package com.example.hci_demo;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
@@ -19,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<MovieModelClass> listMovie ;
     private MovieAdapterStyleA movieAdapterStyleA;
     private RecyclerView recyclerViewMovie;
+    private ImageView iconSearch;
     private ImageButton buttonAge6;
     private ImageButton buttonAge12;
     private ImageButton buttonAge18;
@@ -36,7 +39,17 @@ public class MainActivity extends AppCompatActivity {
         getDataRecyclerView();
         updateRecyclerView();
 
-        //event btn 6
+        //event btn move search screen
+        iconSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Context context = v.getContext();
+                Intent intentSearch = new Intent(context, SearchActivity.class);
+                startActivity(intentSearch);
+            }
+        });
+
+        // event btn 6
         buttonAge6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -100,14 +113,15 @@ public class MainActivity extends AppCompatActivity {
 
     private void getDataAge18RecyclerView() {
         listMovie.clear();
-        listMovie.add(new MovieModelClass("Thor","150 min",R.mipmap.image_400180));
-        listMovie.add(new MovieModelClass("Thor","150 min",R.mipmap.image_400180));
-        listMovie.add(new MovieModelClass("Thor","150 min",R.mipmap.image_400180));
+        listMovie.add(new MovieModelClass("Thor","150 min",R.mipmap.img_main_000));
+        listMovie.add(new MovieModelClass("Thor","150 min",R.mipmap.img_sub_011));
+        listMovie.add(new MovieModelClass("Thor","150 min",R.mipmap.img_sub_012));
         listMovie.add(new MovieModelClass("Thor","150 min",R.mipmap.image_400180));
     }
 
     private void initViews() {
         recyclerViewMovie = (RecyclerView) findViewById(R.id.rcvMovie);
+        iconSearch = (ImageView) findViewById(R.id.imgIconSearch);
         buttonAge6 = (ImageButton) findViewById(R.id.imgBtnAge6);
         buttonAge12 = (ImageButton) findViewById(R.id.imgBtnAge12);
         buttonAge18 = (ImageButton) findViewById(R.id.imgBtnAge18);

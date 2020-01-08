@@ -23,6 +23,7 @@
                 android:gravity="center">
             <ImageView
                     android:src="@mipmap/ic_menu"
+                    android:id="@+id/imgIconSearch"
                     android:layout_width="25dp"
                     android:layout_height="25dp">
             </ImageView>
@@ -65,21 +66,21 @@
                 <ImageButton
                         android:id="@+id/imgBtnAge6"
                         android:layout_marginLeft="5dp"
-                        android:background="@mipmap/ic_6age"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"/>
+                        android:background="@mipmap/icon_6plus"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"/>
                 <ImageButton
                         android:id="@+id/imgBtnAge12"
                         android:layout_marginLeft="5dp"
-                        android:background="@mipmap/ic_12age"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"/>
+                        android:background="@mipmap/icon_12plus"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"/>
                 <ImageButton
                         android:id="@+id/imgBtnAge18"
                         android:layout_marginLeft="5dp"
-                        android:background="@mipmap/ic_18age"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"/>
+                        android:background="@mipmap/icon_18plus"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"/>
             </LinearLayout>
 
         </LinearLayout>
