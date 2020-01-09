@@ -5,6 +5,8 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,6 +18,9 @@ public class VideoPlayerActivity extends AppCompatActivity {
     private Button buttonSub;
     private Button buttonNext;
     private Button buttonPre;
+    private TextView textViewCurrentTime;
+    private TextView textViewSumTime;
+    private ImageView imageViewTimeBar;
     public boolean isVisible;
 
     @Override
@@ -37,6 +42,9 @@ public class VideoPlayerActivity extends AppCompatActivity {
                     buttonSub.setVisibility(View.INVISIBLE);
                     buttonNext.setVisibility(View.INVISIBLE);
                     buttonPre.setVisibility(View.INVISIBLE);
+                    textViewCurrentTime.setVisibility(View.INVISIBLE);
+                    textViewSumTime.setVisibility(View.INVISIBLE);
+                    imageViewTimeBar.setVisibility(View.INVISIBLE);
                     isVisible = false;
                     return;
                 }
@@ -45,6 +53,9 @@ public class VideoPlayerActivity extends AppCompatActivity {
                 buttonSub.setVisibility(View.VISIBLE);
                 buttonNext.setVisibility(View.VISIBLE);
                 buttonPre.setVisibility(View.VISIBLE);
+                textViewCurrentTime.setVisibility(View.VISIBLE);
+                textViewSumTime.setVisibility(View.VISIBLE);
+                imageViewTimeBar.setVisibility(View.VISIBLE);
                 isVisible = true;
                 return;
             }
@@ -54,7 +65,7 @@ public class VideoPlayerActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Context context = getApplicationContext();
-                CharSequence text = ">> 5s";
+                CharSequence text = "Skip >> 5s";
                 int duration = Toast.LENGTH_SHORT;
                 Toast toast = Toast.makeText(context, text, duration);
                 toast.show();
@@ -65,7 +76,7 @@ public class VideoPlayerActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Context context = getApplicationContext();
-                CharSequence text = "<< 5s";
+                CharSequence text = "Skip << 5s";
                 int duration = Toast.LENGTH_SHORT;
                 Toast toast = Toast.makeText(context, text, duration);
                 toast.show();
@@ -76,7 +87,7 @@ public class VideoPlayerActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Context context = getApplicationContext();
-                CharSequence text = "5 +";
+                CharSequence text = "Volume: +5";
                 int duration = Toast.LENGTH_SHORT;
                 Toast toast = Toast.makeText(context, text, duration);
                 toast.show();
@@ -87,7 +98,7 @@ public class VideoPlayerActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Context context = getApplicationContext();
-                CharSequence text = "5 -";
+                CharSequence text = "Volume: -5";
                 int duration = Toast.LENGTH_SHORT;
                 Toast toast = Toast.makeText(context, text, duration);
                 toast.show();
@@ -102,5 +113,8 @@ public class VideoPlayerActivity extends AppCompatActivity {
         buttonSub = (Button) findViewById(R.id.btnSub);
         buttonNext = (Button) findViewById(R.id.btnNext);
         buttonPre = (Button) findViewById(R.id.btnPre);
+        imageViewTimeBar = (ImageView) findViewById(R.id.txtTimebar);
+        textViewCurrentTime = (TextView) findViewById(R.id.txtCurrentTime);
+        textViewSumTime = (TextView) findViewById(R.id.txtSumtime);
     }
 }

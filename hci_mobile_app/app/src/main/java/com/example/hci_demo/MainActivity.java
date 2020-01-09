@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         buttonAge6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getDataRecyclerView();
+                getDataAge6RecyclerView();
                 updateRecyclerView();
 
                 Context context = getApplicationContext();
@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
         buttonAge12.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getDataRecyclerView();
+                getDataAge12RecyclerView();
                 updateRecyclerView();
 
                 Context context = getApplicationContext();
@@ -105,18 +105,34 @@ public class MainActivity extends AppCompatActivity {
 
     private void getDataRecyclerView() {
         listMovie.clear();
-        listMovie.add(new MovieModelClass("Thor","150 min",R.mipmap.image_test));
-        listMovie.add(new MovieModelClass("Thor","150 min",R.mipmap.image_test));
-        listMovie.add(new MovieModelClass("Thor","150 min",R.mipmap.image_test));
-        listMovie.add(new MovieModelClass("Thor","150 min",R.mipmap.image_test));
+        listMovie.add(new MovieModelClass("Thor","150 min",R.mipmap.ratatouille_1000));
+        listMovie.add(new MovieModelClass("Thor","150 min",R.mipmap.johnwick_1000));
+        listMovie.add(new MovieModelClass("Thor","150 min",R.mipmap.interstellar_1000));
+        listMovie.add(new MovieModelClass("Thor","150 min",R.mipmap.ratatouille_1000));
     }
 
     private void getDataAge18RecyclerView() {
         listMovie.clear();
-        listMovie.add(new MovieModelClass("Thor","150 min",R.mipmap.img_main_000));
-        listMovie.add(new MovieModelClass("Thor","150 min",R.mipmap.img_sub_011));
-        listMovie.add(new MovieModelClass("Thor","150 min",R.mipmap.img_sub_012));
-        listMovie.add(new MovieModelClass("Thor","150 min",R.mipmap.image_400180));
+        listMovie.add(new MovieModelClass("Thor","150 min",R.mipmap.johnwick_1000));
+        listMovie.add(new MovieModelClass("Thor","150 min",R.mipmap.johnwick_1001));
+        listMovie.add(new MovieModelClass("Thor","150 min",R.mipmap.johnwick_1002));
+        listMovie.add(new MovieModelClass("Thor","150 min",R.mipmap.johnwick_1002));
+    }
+
+    private void getDataAge12RecyclerView() {
+        listMovie.clear();
+        listMovie.add(new MovieModelClass("Thor","150 min",R.mipmap.interstellar_1000));
+        listMovie.add(new MovieModelClass("Thor","150 min",R.mipmap.interstellar_1001));
+        listMovie.add(new MovieModelClass("Thor","150 min",R.mipmap.interstellar_1001));
+        listMovie.add(new MovieModelClass("Thor","150 min",R.mipmap.interstellar_1002));
+    }
+
+    private void getDataAge6RecyclerView() {
+        listMovie.clear();
+        listMovie.add(new MovieModelClass("Thor","150 min",R.mipmap.ratatouille_1000));
+        listMovie.add(new MovieModelClass("Thor","150 min",R.mipmap.ratatouille_1001));
+        listMovie.add(new MovieModelClass("Thor","150 min",R.mipmap.ratatouille_1002));
+        listMovie.add(new MovieModelClass("Thor","150 min",R.mipmap.ratatouille_1002));
     }
 
     private void initViews() {

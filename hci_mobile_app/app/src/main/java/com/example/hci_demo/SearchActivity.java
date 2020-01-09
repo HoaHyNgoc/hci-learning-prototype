@@ -119,9 +119,9 @@ public class SearchActivity extends AppCompatActivity {
 
     private void getDataRecyclerView() {
         listMovie.clear();
-        listMovie.add(new MovieModelClass("Thor1","150 min",R.mipmap.img_main_000));
-        listMovie.add(new MovieModelClass("Max","150 min",R.mipmap.img_main_000));
-        listMovie.add(new MovieModelClass("Min","150 min",R.mipmap.img_main_000));
-        listMovie.add(new MovieModelClass("Pro","150 min",R.mipmap.img_main_000));
+        listMovie.add(new MovieModelClass("Thor","150 min",R.mipmap.ratatouille_1000));
+        listMovie.add(new MovieModelClass("Thor","150 min",R.mipmap.johnwick_1000));
+        listMovie.add(new MovieModelClass("Thor","150 min",R.mipmap.interstellar_1000));
+        listMovie.add(new MovieModelClass("Thor","150 min",R.mipmap.ratatouille_1000));
     }
 }
