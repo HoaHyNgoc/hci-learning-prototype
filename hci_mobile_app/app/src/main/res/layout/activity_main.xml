@@ -64,6 +64,11 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content">
                 <ImageButton
+                        android:id="@+id/imgBtnAll"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@mipmap/icon_all"/>
+                <ImageButton
                         android:id="@+id/imgBtnAge6"
                         android:layout_marginLeft="5dp"
                         android:background="@mipmap/icon_6plus"
@@ -89,7 +94,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="10dp"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="0dp">
             <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rcvMovie"

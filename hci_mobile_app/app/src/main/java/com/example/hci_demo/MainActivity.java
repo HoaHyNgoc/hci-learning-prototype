@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageButton buttonAge6;
     private ImageButton buttonAge12;
     private ImageButton buttonAge18;
+    private  ImageButton buttonAll;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,6 +96,15 @@ public class MainActivity extends AppCompatActivity {
                 toast.show();
             }
         });
+
+        // event all
+        buttonAll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getDataRecyclerView();
+                updateRecyclerView();
+            }
+        });
     }
 
     private void updateRecyclerView() {
@@ -108,7 +118,9 @@ public class MainActivity extends AppCompatActivity {
         listMovie.add(new MovieModelClass("Thor","150 min",R.mipmap.ratatouille_1000));
         listMovie.add(new MovieModelClass("Thor","150 min",R.mipmap.johnwick_1000));
         listMovie.add(new MovieModelClass("Thor","150 min",R.mipmap.interstellar_1000));
-        listMovie.add(new MovieModelClass("Thor","150 min",R.mipmap.ratatouille_1000));
+        listMovie.add(new MovieModelClass("Thor","150 min",R.mipmap.inception_01));
+        listMovie.add(new MovieModelClass("Thor","150 min",R.mipmap.hotel_01));
+        listMovie.add(new MovieModelClass("Thor","150 min",R.mipmap.nguoidep_01));
     }
 
     private void getDataAge18RecyclerView() {
@@ -117,6 +129,7 @@ public class MainActivity extends AppCompatActivity {
         listMovie.add(new MovieModelClass("Thor","150 min",R.mipmap.johnwick_1001));
         listMovie.add(new MovieModelClass("Thor","150 min",R.mipmap.johnwick_1002));
         listMovie.add(new MovieModelClass("Thor","150 min",R.mipmap.johnwick_1002));
+        listMovie.add(new MovieModelClass("Thor","150 min",R.mipmap.inception_01));
     }
 
     private void getDataAge12RecyclerView() {
@@ -125,14 +138,16 @@ public class MainActivity extends AppCompatActivity {
         listMovie.add(new MovieModelClass("Thor","150 min",R.mipmap.interstellar_1001));
         listMovie.add(new MovieModelClass("Thor","150 min",R.mipmap.interstellar_1001));
         listMovie.add(new MovieModelClass("Thor","150 min",R.mipmap.interstellar_1002));
+        listMovie.add(new MovieModelClass("Thor","150 min",R.mipmap.hotel_01));
     }
 
     private void getDataAge6RecyclerView() {
         listMovie.clear();
         listMovie.add(new MovieModelClass("Thor","150 min",R.mipmap.ratatouille_1000));
-        listMovie.add(new MovieModelClass("Thor","150 min",R.mipmap.ratatouille_1001));
-        listMovie.add(new MovieModelClass("Thor","150 min",R.mipmap.ratatouille_1002));
-        listMovie.add(new MovieModelClass("Thor","150 min",R.mipmap.ratatouille_1002));
+        listMovie.add(new MovieModelClass("Thor","150 min",R.mipmap.ratatouille_600w));
+        listMovie.add(new MovieModelClass("Thor","150 min",R.mipmap.ratatouille_600w));
+        listMovie.add(new MovieModelClass("Thor","150 min",R.mipmap.hotel_01));
+        listMovie.add(new MovieModelClass("Thor","150 min",R.mipmap.nguoidep_01));
     }
 
     private void initViews() {
@@ -141,6 +156,7 @@ public class MainActivity extends AppCompatActivity {
         buttonAge6 = (ImageButton) findViewById(R.id.imgBtnAge6);
         buttonAge12 = (ImageButton) findViewById(R.id.imgBtnAge12);
         buttonAge18 = (ImageButton) findViewById(R.id.imgBtnAge18);
+        buttonAll = (ImageButton) findViewById(R.id.imgBtnAll);
         listMovie = new ArrayList<>();
     }
 }
